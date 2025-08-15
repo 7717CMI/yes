@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Choose CMI or WMR{% endblock %}
+
+{% block content %}
+<div class="container-modern">
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-dark">Choose Content Generation Method</h2>
+        <p class="text-muted">Select your desired content generation platform</p>
+    </div>
+
+    <!-- Option Cards -->
+    <div class="row g-4">
+        <!-- CMI Option -->
+        <div class="col-md-6">
+            <div class="choice-card text-center">
+                <div class="choice-icon ai-icon mb-3">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h5 class="fw-semibold mb-3">CMI Content</h5>
+                <p class="text-muted mb-4">Generate content with CMI's market research data</p>
+                <a href="/custom_cmi_content" class="btn btn-primary">Select CMI</a>
+            </div>
+        </div>
+
+        <!-- WMR Option -->
+        <div class="col-md-6">
+            <div class="choice-card text-center">
+                <div class="choice-icon template-icon mb-3">
+                    <i class="fas fa-copy"></i>
+                </div>
+                <h5 class="fw-semibold mb-3">WMR Content</h5>
+                <p class="text-muted mb-4">Generate content using WMR's data templates</p>
+                <a href="/custom_wmr_content" class="btn btn-warning">Select WMR</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="text-center mt-4">
+        <a href="/custom_index.html" class="btn btn-secondary-modern btn-modern">
+            <i class="fas fa-arrow-left me-2"></i> Back to Custom Home
+        </a>
+    </div>
+</div>
+
+<style>
+.choice-card {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.choice-card:hover {
+    background: #f8faff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.choice-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.ai-icon {
+    background: #e0f2fe;
+    color: #0891b2;
+}
+
+.template-icon {
+    background: #fef3e2;
+    color: #ea580c;
+}
+
+.btn-primary {
+    background: #0891b2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0e7490;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+}
+
+.btn-warning {
+    background: #ea580c;
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #c2410c;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+</style>
+{% endblock %}
